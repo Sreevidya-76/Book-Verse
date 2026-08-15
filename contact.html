@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Book Verse</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div data-header></div>
+  <main>
+    <section class="page-head"><div class="container"><span class="eyebrow">We’re here to help</span><h1>Contact Book Verse</h1><p>Have a question, suggestion, or need help with your library? Send us a message.</p></div></section>
+    <section class="section"><div class="container contact-layout">
+      <div class="contact-details"><span class="eyebrow">Get in touch</span><h2>Let’s talk about books</h2><p>Our support team is happy to help with account questions, book recommendations, and anything else you need.</p><div class="contact-detail"><strong>Phone</strong><span>+1 (800) 555-0148</span></div><div class="contact-detail"><strong>Email</strong><span>hello@bookverse.example</span></div><div class="contact-detail"><strong>Address</strong><span>120 Reader Lane<br />New York, NY 10001</span></div></div>
+      <form class="contact-form" id="contactForm"><div class="form-row"><div class="field"><label for="fullname">Full name</label><input id="fullname" name="fullname" required /></div><div class="field"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" required /></div></div><div class="field"><label for="subject">Subject</label><input id="subject" name="subject" required /></div><div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="7" required></textarea></div><button class="btn" type="submit">Send message</button></form>
+    </div></section>
+  </main>
+  <div data-footer></div>
+  <script src="js/app.js"></script><script>document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();var f=e.currentTarget;var body='Name: '+f.fullname.value+'%0D%0AEmail: '+f.email.value+'%0D%0A%0D%0A'+f.message.value;window.location.href='mailto:23ru1a0577@ruce.ac.in?subject='+encodeURIComponent(f.subject.value)+'&body='+body;if(window.BV?.showToast)BV.showToast('Opening your email client.','success');});</script>
+</body>
+</html>

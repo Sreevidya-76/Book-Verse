@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Library — Book Verse</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/books.css" >
+  <link rel="stylesheet" href="/css/library.css" >
+  <link rel="stylesheet" href="/css/responsive.css" >
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>My Personal Library</h1>
+        <p>All the books you've saved, in one place.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container" id="libraryPage">
+        <div class="library-stats" id="libraryStats"></div>
+        <div class="library-head">
+          <div class="library-search">
+            <input type="text" id="librarySearch" placeholder="Search my library by title or author" aria-label="Search library" />
+          </div>
+          <div class="library-filters">
+            <select id="librarySort" aria-label="Sort library">
+              <option value="recent">Recently added</option>
+              <option value="title">Title A–Z</option>
+              <option value="author">Author A–Z</option>
+              <option value="year">Newest first</option>
+            </select>
+          </div>
+        </div>
+        <div class="books-grid" id="libraryGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/library.js"></script>
+</body>
+</html>

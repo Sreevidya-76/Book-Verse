@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Book Verse</title>
+  <meta name="description" content="Complete your demo order with Book Verse.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>Complete your demo order — no real payment is processed.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container" id="checkoutPage">
+        <div id="checkoutContent">
+          <div class="checkout-layout">
+            <form id="checkoutForm" novalidate>
+              <div class="checkout-section">
+                <h3><span class="step-num">1</span>Customer Information</h3>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+                    <div class="error-msg"></div>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                    <div class="error-msg"></div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required />
+                  <div class="error-msg"></div>
+                </div>
+              </div>
+
+              <div class="checkout-section">
+                <h3><span class="step-num">2</span>Delivery Address</h3>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="house">House / Flat</label>
+                    <input type="text" id="house" name="house" placeholder="Flat 12B" required />
+                    <div class="error-msg"></div>
+                  </div>
+                  <div class="field">
+                    <label for="street">Street</label>
+                    <input type="text" id="street" name="street" placeholder="MG Road" required />
+                    <div class="error-msg"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Bengaluru" required />
+                    <div class="error-msg"></div>
+                  </div>
+                  <div class="field">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="Karnataka" required />
+                    <div class="error-msg"></div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="pincode">Pincode</label>
+                  <input type="text" id="pincode" name="pincode" placeholder="6-digit pincode" maxlength="6" required />
+                  <div class="error-msg"></div>
+                </div>
+              </div>
+
+              <div class="checkout-section">
+                <h3><span class="step-num">3</span>Payment Method</h3>
+                <div class="payment-options">
+                  <label class="pay-option selected">
+                    <input type="radio" name="payment" value="Cash on Delivery" checked />
+                    <span class="pay-ic">💵</span>
+                    <span class="pay-text"><strong>Cash on Delivery</strong><span>Pay when your books arrive</span></span>
+                  </label>
+                  <label class="pay-option">
+                    <input type="radio" name="payment" value="Demo Card Payment" />
+                    <span class="pay-ic">💳</span>
+                    <span class="pay-text"><strong>Demo Card Payment</strong><span>Simulated card transaction</span></span>
+                  </label>
+                  <label class="pay-option">
+                    <input type="radio" name="payment" value="UPI Demo" />
+                    <span class="pay-ic">📱</span>
+                    <span class="pay-text"><strong>UPI Demo</strong><span>Simulated UPI payment</span></span>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-lg btn-block">Place Order →</button>
+            </form>
+            <div id="orderSummary"></div>
+          </div>
+        </div>
+
+        <div class="order-success hidden" id="orderSuccess">
+          <div class="success-ic">✓</div>
+          <h1>Order Placed Successfully!</h1>
+          <p>Thank you for shopping with Book Verse. Your books are on their way.</p>
+          <div class="order-id" id="successOrderId">BV000000</div>
+          <div class="actions">
+            <a class="btn" href="orders.html">View My Orders</a>
+            <a class="btn btn-ghost" href="books.html">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

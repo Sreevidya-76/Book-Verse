@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Register — Book Verse</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/auth.css" >
+  <link rel="stylesheet" href="/css/responsive.css" >
+</head>
+<body>
+  <div data-header></div>
+
+  <main class="auth-wrap">
+    <aside class="auth-aside">
+      <a href="index.html" class="logo"><span class="logo-mark">📖</span><span>Book Verse</span></a>
+      <div>
+        <h2>Build your personal library.</h2>
+        <p>Create a free account to save books, manage a cart, and track your demo orders.</p>
+        <ul class="auth-bullets">
+          <li><span class="b-ic">🔖</span><span>Save unlimited books to your library</span></li>
+          <li><span class="b-ic">🌗</span><span>Sync your theme and search history</span></li>
+          <li><span class="b-ic">🛒</span><span>Enjoy a full ecommerce-style demo flow</span></li>
+        </ul>
+      </div>
+      <div class="auth-foot">© 2026 Book Verse · Demo authentication</div>
+    </aside>
+
+    <section class="auth-main">
+      <div class="auth-card">
+        <h1>Create your account</h1>
+        <p class="sub">Join Book Verse — it only takes a minute.</p>
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" required />
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 6 characters" autocomplete="new-password" required />
+            <div class="pw-hint">Minimum 6 characters.</div>
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" autocomplete="new-password" required />
+            <div class="error-msg"></div>
+          </div>
+          <button type="submit" class="btn btn-block btn-lg">Create Account</button>
+          <div class="demo-note">
+            <strong>Demo only:</strong> Accounts are stored in your browser's local storage. This is not production-secure.
+          </div>
+          <p class="alt-link">Already have an account? <a href="login.html">Log in</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

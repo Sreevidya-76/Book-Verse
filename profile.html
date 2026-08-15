@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>My Profile — Book Verse</title>
+  <meta name="description" content="Manage your Book Verse account, preferences, and activity." >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" >
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/books.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>My Profile</h1>
+        <p>Manage your account, personal details, and activity.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container" id="profilePage">
+        <div class="checkout-layout">
+          <div>
+            <!-- Profile card -->
+            <div class="checkout-section" style="text-align:center">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                <span class="avatar" id="profileAvatar" style="width:84px;height:84px;font-size:2.2rem;box-shadow:var(--shadow)"></span>
+                <h2 style="margin:6px 0 0" id="profileName">—</h2>
+                <p style="margin:0" id="profileEmail">—</p>
+                <span class="badge">Member since <span id="profileSince">—</span></span>
+              </div>
+            </div>
+
+            <!-- Edit profile -->
+            <div class="checkout-section">
+              <h3>Account</h3>
+              <form id="editProfileForm" novalidate>
+                <div class="field">
+                  <label for="epname">Full Name</label>
+                  <input type="text" id="epname" name="name" required />
+                </div>
+                <div class="field">
+                  <label for="epemail">Email</label>
+                  <input type="email" id="epemail" name="email" required />
+                </div>
+                <button type="submit" class="btn">Save Changes</button>
+              </form>
+            </div>
+
+            <!-- Personal details -->
+            <div class="checkout-section">
+              <h3>Personal Details</h3>
+              <form id="personalDetailsForm" novalidate>
+                <div class="form-row">
+                  <div class="field"><label for="pdname">Name</label><input type="text" id="pdname" name="name" required /></div>
+                  <div class="field"><label for="pdphone">Phone</label><input type="tel" id="pdphone" name="phone" placeholder="Add phone number" /></div>
+                </div>
+                <div class="form-row">
+                  <div class="field"><label for="pdgender">Gender</label><select id="pdgender" name="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option><option>Non-binary</option></select></div>
+                  <div class="field"><label for="pdcollege">College</label><input type="text" id="pdcollege" name="college" placeholder="Add college" /></div>
+                </div>
+                <div class="form-row">
+                  <div class="field"><label for="pdcity">City</label><input type="text" id="pdcity" name="city" placeholder="Add city" /></div>
+                  <div class="field"><label for="pdaddress">Address</label><input type="text" id="pdaddress" name="address" placeholder="Add address" /></div>
+                </div>
+                <button type="submit" class="btn">Save Personal Details</button>
+              </form>
+            </div>
+
+            <!-- Change password -->
+            <div class="checkout-section">
+              <h3>Change Password</h3>
+              <form id="changePwForm" novalidate>
+                <div class="field">
+                  <label for="cpwcur">Current Password</label>
+                  <input type="password" id="cpwcur" name="current" required />
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="cpwnext">New Password</label>
+                    <input type="password" id="cpwnext" name="next" required />
+                  </div>
+                  <div class="field">
+                    <label for="cpwconf">Confirm New Password</label>
+                    <input type="password" id="cpwconf" name="confirm" required />
+                  </div>
+                </div>
+                <button type="submit" class="btn">Update Password</button>
+              </form>
+            </div>
+
+
+          </div>
+
+          <div>
+            <!-- Activity -->
+            <div class="order-summary-mini">
+              <h3>Activity</h3>
+              <div class="cat-grid" id="activityStats" style="grid-template-columns:1fr;gap:10px;margin-bottom:16px"></div>
+              <h4 style="font-size:0.95rem;margin:18px 0 10px">Recent Searches</h4>
+              <div id="searchHistoryList" style="display:flex;flex-direction:column;gap:8px"></div>
+              <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px">
+                <a href="library.html" class="btn btn-ghost btn-block">📚 My Library</a>
+                <a href="orders.html" class="btn btn-ghost btn-block">📦 My Orders</a>
+                <button class="btn btn-danger btn-block" id="profileLogout">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+  <script>
+    document.addEventListener('click', (e) => {
+      if (e.target.id === 'profileLogout') {
+        e.preventDefault();
+        BV.showModal({
+          title: 'Logout',
+          message: 'Are you sure you want to log out of your account?',
+          confirmText: 'Logout',
+          danger: true,
+          onConfirm: () => {
+            BV.logoutUser();
+            BV.showToast('Logged out successfully', 'info');
+            setTimeout(() => (window.location.href = 'index.html'), 600);
+          },
+        });
+      }
+    });
+  </script>
+</body>
+</html>

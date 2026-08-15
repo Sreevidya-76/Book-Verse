@@ -1,0 +1,169 @@
+/* ============================================================
+   Book Verse — Book Details Page
+   ============================================================ */
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 44px;
+  align-items: start;
+}
+.details-left {
+  position: sticky;
+  top: calc(var(--header-h) + 20px);
+}
+.details-cover {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  background: var(--surface-2);
+}
+.details-cover img { width: 100%; height: 100%; object-fit: cover; }
+.details-cover .cover-placeholder {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(160deg, var(--brand-soft), var(--surface-2));
+  color: var(--text-muted);
+  font-family: var(--font-serif);
+}
+.details-cover .cover-placeholder .ph-ic { font-size: 2.4rem; margin-bottom: 10px; opacity: 0.6; }
+
+.details-price-box {
+  margin-top: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.details-price-box .price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.details-price-box .demo-tag {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+.details-price-box .save {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.details-actions {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+}
+.details-actions .btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.details-right h1 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.details-author {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.details-author a { font-weight: 600; }
+
+.details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+.details-meta .rating-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.details-meta .stars { font-size: 1.2rem; color: var(--accent); }
+.details-meta .rating-num { font-weight: 700; }
+.details-meta .meta-pill {
+  padding: 5px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 28px;
+  margin: 24px 0;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.info-item .label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-soft);
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.info-item .value {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.details-section { margin: 26px 0; }
+.details-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.details-section p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+}
+.subject-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.subject-tags .chip { cursor: default; }
+.subject-tags .chip:hover { border-color: var(--border-strong); color: var(--text-muted); }
+
+.loading-details {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 60px 0;
+  color: var(--text-muted);
+}

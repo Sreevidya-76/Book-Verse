@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Book Verse — Discover Your Next Great Read</title>
+  <meta name="description" content="Book Verse — Discover books, explore authors, and build your personal digital library. Powered by Open Library." >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" >
+  <link rel="stylesheet" href="css/style.css" >
+  <link rel="stylesheet" href="css/books.css" >
+  <link rel="stylesheet" href="css/responsive.css" >
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-eyebrow">📖 Smart Book Discovery</span>
+          <h1>Discover Your Next <span class="grad">Great Read</span></h1>
+          <p class="lead">Explore thousands of books, discover new authors, and build your personal digital library.</p>
+
+          <div class="hero-cta">
+            <button class="btn btn-outline btn-lg" id="heroExplore">Explore Collection</button>
+            <a class="btn btn-ghost btn-lg" href="#categories">Browse Categories</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><strong>10M+</strong><span>Books indexed</span></div>
+            <div class="hero-stat"><strong>13</strong><span>Categories</span></div>
+            <div class="hero-stat"><strong>Free</strong><span>Personal library</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-book"><img src="https://covers.openlibrary.org/b/id/1050252-L.jpg" alt="" /></div>
+          <div class="hero-book"><img src="https://covers.openlibrary.org/b/id/1050253-L.jpg" alt="" /></div>
+          <div class="hero-book"><img src="https://covers.openlibrary.org/b/id/1050254-L.jpg" alt="" /></div>
+          <div class="hero-book"><img src="https://covers.openlibrary.org/b/id/1050255-L.jpg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why readers love Book Verse</h2>
+        <p class="section-sub">Everything you need to discover, save, and shop for books in one place.</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>Discover Books</h3>
+            <p>Find books by title, author, subject, or keyword from millions of titles.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Personal Library</h3>
+            <p>Save your favourite books and access them anytime, from any device.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Smart Search</h3>
+            <p>Quickly find books using the Open Library database with filters and sorting.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🛒</div>
+            <h3>Easy Shopping</h3>
+            <p>Add books to your cart, manage quantities, and checkout with a demo flow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR BOOKS -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Popular Books</h2>
+        <p class="section-sub">Hand-picked favourites from the community, refreshed live from Open Library.</p>
+        <div id="popularBooks"></div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <p class="section-sub">Jump straight into your favourite genre or topic.</p>
+        <div class="cat-grid" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDED BOOKS -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Recommended for You</h2>
+        <p class="section-sub">Self-development and learning picks to grow your shelf.</p>
+        <div id="recommendedBooks"></div>
+      </div>
+    </section>
+
+    <!-- WHY BOOK VERSE -->
+    <section class="section" id="why" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Built for readers</h2>
+        <p class="section-sub">A modern bookstore experience designed around how you actually read.</p>
+        <div class="why-grid">
+          <div class="why-card"><div class="emoji">🌗</div><h3>Light &amp; Dark Mode</h3><p>Read comfortably day or night with a theme that sticks across pages.</p></div>
+          <div class="why-card"><div class="emoji">📱</div><h3>Fully Responsive</h3><p>Works beautifully on desktop, tablet, and mobile with a touch-friendly UI.</p></div>
+          <div class="why-card"><div class="emoji">🔐</div><h3>Personal &amp; Private</h3><p>Your library, cart, and orders are saved locally and tied to your account.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" style="padding-top:0">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title" style="text-align:left">What is Book Verse?</h2>
+            <p style="font-size:1.05rem">Book Verse is a smart book discovery and personal library platform designed for students and readers. Search millions of titles, save your favourites, and enjoy an ecommerce-style shopping experience — all in your browser.</p>
+            <ul class="about-list">
+              <li><span class="tick">✓</span><span>Book discovery powered by the Open Library API</span></li>
+              <li><span class="tick">✓</span><span>Personal library with search and filters</span></li>
+              <li><span class="tick">✓</span><span>Demo cart, checkout, and order history</span></li>
+              <li><span class="tick">✓</span><span>Light/dark theme and full responsive design</span></li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <h3>📚 Open Library Powered</h3>
+            <p>Book information — titles, authors, covers, subjects, and editions — is retrieved live from the Open Library database. Prices shown are demo store prices for illustration, since Open Library is a bibliographic API and not a real bookstore.</p>
+            <a class="btn btn-soft" href="books.html">Start exploring →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Ready to build your library?</h2>
+          <p>Create a free account and start saving your favourite books today.</p>
+          <div class="hero-cta" style="justify-content:center">
+            <a class="btn btn-lg" href="register.html">Create Account</a>
+            <a class="btn btn-outline btn-lg" href="books.html">Browse Books</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>

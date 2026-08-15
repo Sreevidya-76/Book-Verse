@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — Book Verse</title>
+  <meta name="description" content="Review the books in your cart and proceed to checkout.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Your Cart</h1>
+        <p>Review your books and proceed to checkout when you're ready.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container" id="cartPage">
+        <div class="cart-actions-top" id="cartActions"></div>
+        <div class="cart-layout">
+          <div class="cart-items" id="cartItems"></div>
+          <div id="cartSummary"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

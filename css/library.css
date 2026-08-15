@@ -1,0 +1,53 @@
+/* ============================================================
+   Book Verse — Library Page
+   ============================================================ */
+
+.library-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.library-search {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
+  width: 100%;
+}
+.library-search input {
+  flex: 1;
+  padding: 11px 15px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.92rem;
+}
+.library-search input:focus { outline: none; border-color: var(--brand); box-shadow: var(--ring); }
+
+.library-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.library-stats {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 26px;
+  padding: 18px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.library-stats .stat strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.library-stats .stat span {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}

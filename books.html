@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Books — Book Verse</title>
+  <meta name="description" content="Search and explore millions of books by title, author, ISBN, or keyword on Book Verse.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/books.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Explore Books</h1>
+        <p>Search by title, author, ISBN or keyword across the Open Library catalogue.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container" id="booksPage">
+        <div class="books-toolbar">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by title, author, ISBN or keyword" aria-label="Search books" />
+            <button class="btn" id="searchBtn">Search</button>
+          </div>
+        </div>
+
+        <div class="recent-searches" id="recentSearches"></div>
+
+        <div class="filters">
+          <div class="field">
+            <label for="filterType">Search Type</label>
+            <select id="filterType">
+              <option value="all">All</option>
+              <option value="title">Title</option>
+              <option value="author">Author</option>
+              <option value="subject">Subject</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filterSort">Sort By</label>
+            <select id="filterSort">
+              <option value="relevance">Relevance</option>
+              <option value="title-az">Title A–Z</option>
+              <option value="title-za">Title Z–A</option>
+              <option value="year">Publication Year</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filterLang">Language</label>
+            <select id="filterLang">
+              <option value="all">All</option>
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+              <option value="telugu">Telugu</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="filterYear">Published from year</label>
+            <input type="number" id="filterYear" placeholder="e.g. 2000" min="0" max="2100" />
+          </div>
+        </div>
+
+        <div class="results-bar">
+          <div id="resultsCount"></div>
+        </div>
+
+        <div id="booksResults"></div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/app.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
