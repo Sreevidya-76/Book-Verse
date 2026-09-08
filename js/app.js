@@ -440,7 +440,7 @@
            <span class="avatar">${escapeHtml(user.name.charAt(0).toUpperCase())}</span>
            <span class="desktop-only">${escapeHtml(user.name.split(' ')[0])}</span>
          </a>
-         <button class="icon-btn desktop-only" data-act="logout" title="Logout" aria-label="Logout">⎋</button>`
+         <button class="icon-btn desktop-only" data-act="logout" title="Logout" aria-label="Logout">↪</button>`
       : `<a href="login.html" class="btn btn-ghost btn-sm desktop-only">Login</a>`;
 
     return `

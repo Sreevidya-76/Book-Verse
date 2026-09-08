@@ -1,6 +1,3 @@
-/* ============================================================
-   Book Verse — Book Details Page
-   ============================================================ */
 
 .details-grid {
   display: grid;
@@ -150,7 +147,8 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10;
-  overflow: hidden;
+   line-clamp: 10;
+   overflow: hidden;
 }
 .subject-tags {
   display: flex;

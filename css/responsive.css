@@ -1,8 +1,4 @@
-/* ============================================================
-   Book Verse — Responsive Breakpoints
-   ============================================================ */
 
-/* Desktop: no off-canvas drawer or right-side layout element */
 @media (min-width: 1025px) {
   .mobile-menu { display: none !important; }
   .mobile-backdrop { display: none !important; }
